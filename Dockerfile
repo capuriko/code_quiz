@@ -8,3 +8,10 @@ RUN apk update && \
     npm install -g @vue/cli-service && \
     npm install -g vue-template-compiler && \
     npm install -g firebase-tools
+
+ADD ./firebase/code_quiz ./
+RUN npm install
+
+#RUN yes | vue add vuetify
+
+CMD ["npm","run","serve"]

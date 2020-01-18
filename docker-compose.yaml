@@ -5,8 +5,15 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./firebase:/work
-    tty: true
+      - ./firebase/code_quiz:/work
+      #- ./firebase/code_quiz/build:/work/build
+      #- ./firebase/code_quiz/config:/work/config
+      #- ./firebase/code_quiz/public:/work/public
+      #- ./firebase/code_quiz/src:/work/src
+      #- ./firebase/code_quiz/static:/work/static
+      #- ./firebase/code_quiz/index.html:/work/index.html
+      #- ./firebase/code_quiz/vue.config.js:/work/vue.config.js
+    #tty: true
     command:
-      /bin/sh
-      #npm run serve
+      #/bin/sh
+      npm run serve
