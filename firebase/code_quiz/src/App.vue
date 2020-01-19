@@ -9,7 +9,7 @@
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
-¬          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
           transition="scale-transition"
           width="40"
         />
@@ -37,19 +37,19 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <top/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import top from './components/top';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    top,
   },
 
   data: () => ({
