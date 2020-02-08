@@ -1,18 +1,18 @@
 <template>
-  <v-container>
+  <v-container id="app">
     <v-layout
       text-center
       wrap
     >
       <v-flex mb-１>
         <h1 class="display-1 font-weight-bold mb-１">
-          コード当てクイズ
+          <font color="blue">コード当てクイズ</font>
         </h1>
       </v-flex> 
 
 
       <v-flex xs12>
-        <h1 class="title font-weight-regular mb-1">
+        <h1 class="title font-weight-bold mb-1">
           ♬楽しく音感を鍛えよう♫
         </h1>
       </v-flex> 
@@ -23,9 +23,21 @@
       <img class="img" :src="assetsImage3" width="100" />
       </v-flex> 
 
+      <!-- 説明文 -->
+      <v-flex xs12>
+        <h1 class="body-1 font-weight-regular mb-1"
+        style="white-space:pre-wrap; word-wrap:break-word;">
+          流れる音を聴いて、三和音・四和音のうち<br>
+          どのコードネームか選択式で当てる<br>
+          クイズゲームです♪
+        </h1>
+      </v-flex> 
+
     
       <v-flex xs12 style="padding-top: 1rem;">
-      <v-btn rounded color="pink">始める</v-btn>
+        <router-link tag="div" to="/select_level">
+          <v-btn rounded color="pink" dark>始める</v-btn>
+        </router-link>
       </v-flex>
 
     </v-layout>
@@ -41,59 +53,9 @@ export default {
   name: 'top',
 
   data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
     assetsImage1: AssetsImage1,
     assetsImage2: AssetsImage2,
     assetsImage3: AssetsImage3,
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/layout/pre-defined',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
   }),
 };
 </script>

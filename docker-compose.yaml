@@ -5,7 +5,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./firebase/code_quiz:/work
+      - ./firebase/code_quiz/src:/work/firebase/code_quiz/src
+      - ./firebase/code_quiz/package.json:/work/firebase/code_quiz/package.json
       #- ./firebase/code_quiz/build:/work/build
       #- ./firebase/code_quiz/config:/work/config
       #- ./firebase/code_quiz/public:/work/public
