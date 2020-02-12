@@ -1,5 +1,5 @@
 <template>
-  <v-container id="app">
+  <v-container>
     <v-layout
       text-center
       wrap
@@ -36,7 +36,13 @@
     
       <v-flex xs12 style="padding-top: 1rem;">
         <router-link tag="div" to="/select_level">
-          <v-btn rounded color="pink" dark>始める</v-btn>
+          <v-btn rounded color="pink" dark>さっそく始める！</v-btn>
+        </router-link>
+      </v-flex>
+
+       <v-flex xs12 style="padding-top: 1rem;">
+        <router-link tag="div" to="/learning_code">
+          <v-btn rounded color="orange" dark>コードについて学ぶ</v-btn>
         </router-link>
       </v-flex>
 

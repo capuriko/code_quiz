@@ -7,6 +7,7 @@ import App from '@/App.vue'
 
 import top from '@/components/top'
 import select_level from '@/components/select_level'
+import learning_code from '@/components/learning_code'
 import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
@@ -14,7 +15,8 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/',      component: top },
-  { path: '/select_level', component: select_level }
+  { path: '/select_level', component: select_level },
+  { path: '/learning_code', component: learning_code }
 ]
 
 const router = new VueRouter({
